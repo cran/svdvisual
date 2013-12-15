@@ -7,7 +7,7 @@ The SVD three dimensional plots: surface plot and/or image plot for SVD decompos
 This function provides surface or image plot for singular value decomposition method. The plot includes several subplots for the following components: original data, cumulative approximation matrix, residual matrix, and several rank 1 SVD components. 
 }
 \usage{
-svd3dplot(data, ncomp = 3, isurface = T, iimage = F, 
+svd3dplot(data, ncomp = 3, irow=F, icol=F, isurface = T, iimage = F, 
       xlab = "Column", ylab = "Row", zlab = "", ...)
 }
 \arguments{
@@ -15,8 +15,14 @@ svd3dplot(data, ncomp = 3, isurface = T, iimage = F,
 The input data matrix
 }
   \item{ncomp}{
-The number of components to calculate. The default value is 3. If the specified number is larger than the rank of the matrix, this option will automatically be set to the rank of the matrix minus one. 
+The number of components to calculate. The default value is 3. If the specified number is larger than the rank of the matrix, this option will automatically be set to the rank of the matrix minus one. When either irow and icol is specified as \code{TRUE}, the output will include a mean matrix, and ncomp-1 SVD component of the demeaned matrix. 
 }
+  \item{irow}{
+  	a logical number. If irow and icol both are \code{TRUE}, this program will calculate a \code{\link{doublemean}}. The resulting SVD will be based on the demeaned matrix (i.e., removing the double mean). If only irow is \code{TRUE}, this program will calculate a \code{\link{rowmean}}, and the resulting SVD will be based on the corresponding demeaned matrix (i.e., removing the row mean).
+  }
+  \item{icol}{
+  	a logical number. If irow and icol both are \code{TRUE}, this program will calculate a \code{\link{doublemean}}. The resulting SVD will be based on the demeaned matrix (i.e., removing the double mean). If only icol is \code{TRUE}, this program will calculate a \code{\link{columnmean}}, and the resulting SVD will be based on the corresponding demeaned matrix (i.e., removing the column mean).  	
+  }
   \item{isurface}{
 Whether the surface plot will be generated. The default value is \code{TRUE}.
 }

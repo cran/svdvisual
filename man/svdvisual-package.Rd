@@ -12,13 +12,13 @@ This package provides a full spectrum of many useful visualization tools associa
 \tabular{ll}{
 Package: \tab svdvisual\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2013-09-23\cr
+Version: \tab 1.1\cr
+Date: \tab 2013-12-15\cr
 License: \tab GPL \cr
 }
 }
 \author{
-Lingsong Zhang<lingsong@purdue.edu>
+Lingsong Zhang<lingsong@purdue.edu> and Yao Wang (wang1150@purdue.edu)
 Maintainer: Lingsong Zhang<lingsong@purdue.edu>
 }
 \references{
